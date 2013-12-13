@@ -1,11 +1,33 @@
 <html>
     <head>
         <title>TFS Chrome Extension Options</title>
+        <script src="jquery.min.js"></script>
+        <script src="options.js"></script>
+        <link href="reset.css" rel="stylesheet" type="text/css">
+        <link href="basic.css" rel="stylesheet" type="text/css">
+        <style>
+            #status
+            {
+                color: #0a0;
+            }
+            #baseUrl
+            {
+                font-size: 1.5em;
+                width: 100%;
+            }
+        </style>
     </head>
     <body>
-        <p>TFS Base URL: <input id="baseUrl" type="text" /></p>
-        <div id="status"></div>
-        <button id="save">Save</button>
-        <script src="options.js"></script>
+        <img id="logo" src="" />
+        <h1 id="name"></h1>
+        <p id="description"></p>
+        <div class="standout">
+            <form id="config-form" action="#">
+                <label for="baseUrl">TFS Base URL <span class="example">http://server:8080/tfs/DefaultCollection/Project/</span></label>
+                <input id="baseUrl" type="text" />
+                <p><input type="submit" value="Save" /> <span id="status"></span></p>
+            </form>
+        </div>
+        <p><a href="https://github.com/alejandro5042/tfs-chrome">See the souce...</a></p>
     </body>
 </html>

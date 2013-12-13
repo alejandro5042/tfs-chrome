@@ -1,17 +1,27 @@
 {
-  "background":
-  {
-    "scripts": [ "background.js" ]
-  },
-  
-  "name": "TFS Chrome Extension",
-  "description": "TFS utilities and search engines for Chrome.",
-  "omnibox": { "keyword" : "tf" },
-  "permissions": [ "http://www.google.com/" ],
-  "version": "1.0",
-  
-  "options_page": "options.html",
-  
-  "minimum_chrome_version": "9",
-  "manifest_version": 2
+    "manifest_version": 2,
+    "minimum_chrome_version": "9",
+    
+    "version": "0.1",
+    "name": "TF Search",
+    "description": "Easy omnibox searches for changesets and shelvesets.",
+    "author": "Alejandro Barreto",
+    
+    "icons":
+    {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    
+    "options_page": "options.html",
+    "background":
+    {
+        "scripts": [ "background.js" ]
+    },
+        
+    "omnibox":
+    {
+        "keyword" : "tf"
+    }
 }
