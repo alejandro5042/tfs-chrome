@@ -1,6 +1,6 @@
-tfs-chrome
+TF Search
 ==========
 
-TFS utilities and search engines for Chrome.
+Easy omnibox searches for changesets and shelvesets.
 
 - Alejandro Barreto
