@@ -37,16 +37,18 @@ chrome.omnibox.onInputChanged.addListener(function(text, suggest)
 
 function navigate(url)
 {
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        chrome.tabs.update(tabs[0].id, {url: url});
-    });
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs)
+        {
+            chrome.tabs.update(tabs[0].id, {url: url});
+        });
 }
 
 chrome.omnibox.onInputEntered.addListener(function(text)
     {
         if (!localStorage["baseUrl"])
         {
-            navigate("options.html");
+            var manifest = chrome.runtime.getManifest();
+            navigate(manifest.options_page);
             return;
         }
 

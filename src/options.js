@@ -32,7 +32,8 @@ $(document).ready(function() {
         }
     }
 
-    function restore_options() {
+    function restore_options()
+    {
         $("#baseUrl").val(localStorage["baseUrl"]);
     }
     
@@ -46,7 +47,7 @@ $(document).ready(function() {
     {
         var manifest = chrome.runtime.getManifest();
         document.title = manifest.name + " Options";
-        $("#name").html(manifest.name + " " + manifest.version);
+        $("#name").html(manifest.name + " - " + manifest.version);
         $("#description").html(manifest.description);
         $("#logo").attr('src', manifest.icons['128']);
         $("#baseUrl").focus();
